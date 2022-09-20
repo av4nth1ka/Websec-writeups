@@ -18,5 +18,5 @@ if(isset($_POST['c'])) {
 }
 ?>
 ```
-+ So, when we give something in the field, lets say `12345` it outputs the hashed format of 12345
-+ 
++ So, when we give something in the field, will will get the following as output
++ `Here is the hash of your flag: 7c00249d409a91ab84e3f421c193520d9fb3674b`
