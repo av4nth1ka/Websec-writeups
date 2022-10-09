@@ -18,8 +18,9 @@ clue given in source code:  Yeah, the webserver is configured so that you can't 
 So, the function parse_url returns false when we give a malformed URL. <br>
 So, our final payload can be: <br>
 https://websec.fr/level25/index.php?page=flag&link=localhost:1337<br>
-note: The port cannot be parsed when the address given is wrong.
+note: The port cannot be parsed when the address given is wrong.<br>
 
+Reference: https://www.geeksforgeeks.org/php-parse_url-function/#:~:text=Return%20Values%3A,the%20parameter%20is%20malformed%20URL.
 
 
 
