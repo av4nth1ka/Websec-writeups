@@ -16,3 +16,6 @@ if (isset ($_REQUEST['f']) && isset ($_REQUEST['hash'])) {
 }
 ?>
 ```
++ So, we need to bypass the check `if($request==hash)`. 
++ Anither thing to notice it is using loose comparison, so now it is easy to bypass
++ 
